@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include example_usage.py
+recursive-include abc_xml_converter *
+recursive-include tests *
+recursive-include files *

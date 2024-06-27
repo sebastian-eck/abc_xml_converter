@@ -6,7 +6,7 @@ with open("README.md", "r", encoding='utf-8') as fh:
 setuptools.setup(
     include_package_data=True,
     name='abc_xml_converter',
-    version='1.0.0',
+    version='1.0.1',
     author='Sebastian Oliver Eck',
     url="https://github.com/sebastian-eck/abc_xml_converter",
     description='ABC-XML Converter',

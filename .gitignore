@@ -1,0 +1,7 @@
+/files/abc_converted/
+/files/xml_converted/
+*.pyc
+__pycache__/
+dist/
+build/
+*.egg-info/

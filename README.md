@@ -16,8 +16,6 @@ The original tools were designed for use via a command-line interface (CLI). The
 
 ## Installation
 
-## Installation
-
 You can install the package via PyPi:
 
 ```sh

@@ -23,12 +23,16 @@ You can install the package via PyPi:
 ```sh
 pip install abc-xml-converter
 ```
+After installing the package via PyPi, you can simply import the conversion functions:
 
-[Add a ]
+```
+from abc_xml_converter import convert_abc2xml
+from abc_xml_converter import convert_xml2abc
+```
 
 If you want to contribute to the project, clone the repository:
 
-```sh
+```
 git clone https://github.com/sebastian-eck/abc-xml-converter.git
 ```
 
@@ -43,8 +47,8 @@ You can use these functions in your own scripts or run the provided example scri
 Create a file `example_usage.py` with the following content:
 
 ```python
-from abc_xml_converter.abc2xml import convert_abc2xml
-from abc_xml_converter.xml2abc import convert_xml2abc
+from abc_xml_converter import convert_abc2xml
+from abc_xml_converter import convert_xml2abc
 
 
 def read_abc_file(filename, errmsg='read error: '):
@@ -63,7 +67,6 @@ def read_abc_file(filename, errmsg='read error: '):
 
 abc_file_txt = read_abc_file("files/abc/Bach 1.abc", errmsg='read error: ')
 
-
 def read_xml_file(filename, errmsg='read error: '):
     try:
         with open(filename, 'r', encoding='utf-8') as f:
@@ -73,12 +76,12 @@ def read_xml_file(filename, errmsg='read error: '):
         print(errmsg + repr(e) + ' ' + filename)
         return None
 
-
 xml_file_txt = read_xml_file("files/xml_files/Bach 2.xml", errmsg='read error: ')
 
-
 def main():
+
     # 1) Example usage of convert_abc2xml
+
 
     # a) Converting ABC to XML and returning as string
 
@@ -89,7 +92,7 @@ def main():
 
     # b) Converting ABC to XML and saving to directory
 
-    convert_abc2xml(file_to_convert="files/abc/Bach 1.abc", output_directory="xml_files_converted")
+    convert_abc2xml(file_to_convert="files/abc/Bach 1.abc", output_directory="files/xml_converted")
 
     # c) Converting ABC string to XML and returning as string
 
@@ -100,9 +103,11 @@ def main():
 
     # d) Converting ABC string to XML and saving to directory:")
 
-    convert_abc2xml(file_to_convert=abc_file_txt, output_directory="xml_files_converted", file_to_convert_is_txt=True)
+    convert_abc2xml(file_to_convert=abc_file_txt, output_directory="files/xml_converted", file_to_convert_is_txt=True)
+
 
     # 2) Example usage of convert_xml2abc
+
 
     # a) Converting XML to ABC and returning as string
 
@@ -113,7 +118,7 @@ def main():
 
     # b) Converting XML to ABC and saving to directory
 
-    convert_xml2abc(file_to_convert="files/xml_files/Bach 2.xml", output_directory="abc_files_converted")
+    convert_xml2abc(file_to_convert="files/xml_files/Bach 2.xml", output_directory="files/abc_converted")
 
     # c) Converting XML string to ABC and returning as string
 
@@ -124,7 +129,7 @@ def main():
 
     # d) Converting XML string to ABC and saving to directory
 
-    convert_xml2abc(file_to_convert=xml_file_txt, output_directory="abc_files_converted", file_to_convert_is_txt=True)
+    convert_xml2abc(file_to_convert=xml_file_txt, output_directory="files/abc_converted", file_to_convert_is_txt=True)
 
 
 if __name__ == "__main__":

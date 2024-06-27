@@ -1,5 +1,5 @@
-from abc_xml_converter.abc2xml import convert_abc2xml
-from abc_xml_converter.xml2abc import convert_xml2abc
+from abc_xml_converter import convert_abc2xml
+from abc_xml_converter import convert_xml2abc
 
 
 def read_abc_file(filename, errmsg='read error: '):

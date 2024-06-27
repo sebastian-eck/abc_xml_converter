@@ -1,6 +1,7 @@
 from abc_xml_converter import convert_abc2xml
 from abc_xml_converter import convert_xml2abc
 
+# Prepare ABC and XML files as strings
 
 def read_abc_file(filename, errmsg='read error: '):
     try:
@@ -28,6 +29,7 @@ def read_xml_file(filename, errmsg='read error: '):
         return None
 
 xml_file_txt = read_xml_file("files/xml_files/Bach 2.xml", errmsg='read error: ')
+
 
 def main():
 
